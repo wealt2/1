@@ -7,7 +7,7 @@ class Bird(object):
     def __init__(self):
         '定义初始方法'
         self.birdRect=pygame.Rect(65,50,50,50)
-        self.birdStatus=[pygame.image.load('bird3.jpg'),pygame.image.load('bird2.png'),pygame.image.load('bird3.png')]
+        self.birdStatus=[pygame.image.load('bird3.png'),pygame.image.load('bird2.png'),pygame.image.load('bird3.png')]
         self.status=0      #默认飞行状态
         self.birdx=120     #鸟所在的x轴坐标
         self.birdy=345     #y轴坐标
@@ -107,9 +107,7 @@ if __name__ == '__main__':
                 Bird.gravity=5
                 Bird.jumpSpeed=10
         background = pygame.image.load('background.png')
-        print(checkdead())
         if checkdead():
             getresult()
-
         else:
             createmap()
